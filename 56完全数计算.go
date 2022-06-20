@@ -1,0 +1,21 @@
+package main
+
+import "fmt"
+
+func main() {
+	n := 0
+	fmt.Scan(&n)
+	num := 0
+	for i := 1; i < n; i++ {
+		sum := 0
+		for j := 1; j < i; j++ {
+			if i%j == 0 {
+				sum = sum + j
+			}
+		}
+		if sum == i {
+			num++
+		}
+	}
+	fmt.Println(num)
+}
